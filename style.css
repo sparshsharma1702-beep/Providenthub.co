@@ -1,0 +1,327 @@
+/* ---------- GLOBAL ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: url("images/background.jpg") center / cover no-repeat fixed;
+}
+
+/* ---------- HEADER / NAV ---------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-center a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+}
+
+.nav-center a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.nav-center a:hover::after,
+.nav-center a.active::after {
+  width: 100%;
+}
+
+.nav-right {
+  display: flex;
+  gap: 12px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.6);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.45);
+  color: black;
+}
+
+.book-btn {
+  background: rgba(255,255,255,0.45);
+  color: black;
+  font-weight: bold;
+}
+
+/* ---------- DROPDOWN ---------- */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.6);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  background: rgba(255,255,255,0.5);
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  background: rgba(0,0,0,0.8);
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 200px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255,255,255,0.3);
+  color: black;
+}
+
+.show {
+  display: block;
+}
+
+/* ---------- HERO ---------- */
+.hero,
+.services-hero {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero h1,
+.services-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.hero p,
+.services-hero p {
+  opacity: 0.9;
+}
+
+/* ---------- EXPLORE BUTTON ---------- */
+.explore-btn {
+  margin-top: 20px;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.6);
+  color: white;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 17px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.35s ease;
+}
+
+.explore-btn:hover {
+  background: rgba(255,255,255,0.5);
+  color: black;
+  transform: translateY(-3px) scale(1.08);
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 50px 30px;
+  background: rgba(0,0,0,0.55);
+}
+
+/* ---------- SERVICES ---------- */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 30px;
+}
+
+.service-card {
+  width: 300px;
+  padding: 22px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.04);
+}
+
+.short-text {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* expandable info */
+.service-info {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.service-card.active .service-info {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.service-card.active {
+  box-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+
+/* ---------- OFFERS BUTTON ---------- */
+.offers-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(255,255,255,0.22);
+  border: 1.5px solid rgba(255,255,255,0.55);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.35);
+  transition: all 0.3s ease;
+  z-index: 200;
+}
+
+.offers-btn:hover {
+  background: rgba(255,255,255,0.45);
+  color: black;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.7);
+}
+
+.social-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-btn img {
+  width: 35px;
+  height: 35px;
+}
+
+.social-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .top-nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-center {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1,
+  .services-hero h1 {
+    font-size: 32px;
+  }
+}
+.icon-list {
+  list-style: none;
+  padding: 0;
+}
+
+.icon-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pin {
+  font-size: 18px;
+}
+.icon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pin {
+  font-size: 18px;
+  line-height: 1.2;
+}
+.pin {
+  font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+}

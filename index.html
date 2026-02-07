@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provident Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="leads.html" class="offers-btn">Get Offers</a>
+
+<header>
+  <nav class="top-nav">
+
+    <div class="nav-left">
+      <span class="brand">Provident Hub</span>
+    </div>
+
+    <div class="nav-center">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Services ⌄</button>
+        <div class="dropdown-content">
+          <a href="services.html">Hotels & Villas</a>
+          <a href="services.html">Cabs & Rentals</a>
+          <a href="services.html">Tours & Travel</a>
+          <a href="services.html">Events & Photography</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <a href="leads.html" class="btn nav-btn">Get Offers</a>
+      <a href="leads.html" class="btn nav-btn book-btn">Book Now</a>
+    </div>
+
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Provident Hub</h1>
+  <p>Your All-In-One Travel & Local Services Partner in Uttarakhand</p>
+  <a href="services.html" class="explore-btn">Explore Services</a>
+</section>
+
+<section class="section">
+  <h2>What We Offer</h2>
+
+  <div class="services-container">
+
+    <div class="service-card" onclick="toggleInfo(this)">
+      <h3>Hotels, Villas & Real Estate</h3>
+      <p class="short-text">Premium properties across Uttarakhand</p>
+      <div class="service-info">
+        <p>Hotels, villas, homestays & AirBnBs in Dehradun, Rishikesh, Haridwar, Mussoorie & more.</p>
+      </div>
+    </div>
+
+    <div class="service-card" onclick="toggleInfo(this)">
+      <h3>Cabs & Rentals</h3>
+      <p class="short-text">All-India transport services</p>
+      <div class="service-info">
+        <p>Taxi, Innova, Traveller & Bus for tours, weddings & corporate travel.</p>
+      </div>
+    </div>
+
+    <div class="service-card" onclick="toggleInfo(this)">
+      <h3>Events & Photography</h3>
+      <p class="short-text">Weddings, parties & professional shoots</p>
+      <div class="service-info">
+        <p>Complete event planning with photography & videography services.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <button id="instagramBtn" class="social-btn"><img src="images/instalogo.jpg" alt="Instagram"></button>
+  <button id="facebookBtn" class="social-btn"><img src="images/facebooklogo.jpg" alt="Facebook"></button>
+  <button id="whatsappBtn" class="social-btn"><img src="images/whatsapplogo.jpg" alt="WhatsApp"></button>
+  <p>© 2026 Provident Hub</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
